@@ -1,0 +1,32 @@
+server:
+  port: 8763
+  context-path: /message
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+spring:
+  application:
+    name: message
+  activemq:
+    broker-url: tcp://192.168.137.231:61616
+    in-memory: true
+    pool:
+      enabled: false
+  mail:
+    host: smtp.163.com
+    username: 15810922547@163.com
+    password: admin123
+    enable:  true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      required: true
+########################################
+
+msg:
+  subject:  你老公提示您会员注册成功邮件。
+  text:  恭喜您的账户{},www.nanFastEmail.com
+
